@@ -1,4 +1,4 @@
-package com.atguigu.ssyx.common.utils;
+package com.rinneohara.utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

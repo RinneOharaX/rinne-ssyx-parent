@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rinneohara.ssyx.acl.mapper.AdminRoleMapper">
+    <insert id="assginRole">
+        INSERT INTO admin_role(role_id,admin_id)
+        VALUES
+        <foreach collection="assignedRoleId" item="id" index="index" separator=",">
+            (#{id},#{adminId})
+        </foreach>
+    </insert>
+    <update id="removeAllRoleByAdminId">
+        UPDATE admin_role SET is_deleted=1 WHERE admin_id=#{adminId}
+    </update>
+
+
+
+    <!--int insertUser();-->
+    <select id="selectRoleByAdminId" resultType="com.rinneohara.ssyx.model.acl.Role">
+        SELECT r.id,
+               r.role_name,
+               r.role_code,
+               r.remark,
+               r.create_time,
+               r.update_time FROM admin_role ar LEFT JOIN role r ON ar.role_id=r.id WHERE ar.admin_id=#{adminId} AND ar.is_deleted=0
+    </select>
+</mapper>
