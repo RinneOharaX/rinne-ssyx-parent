@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rinneohara.ssyx.acl.mapper.RolePermissionMapper">
+    <!--int insertUser();-->
+    <insert id="assginRole">
+        INSERT INTO role_permission(role_id,permission_id) VALUES
+                                                                   <foreach collection="permissionId" item="item" separator=",">
+                                                                     (  #{roleId},#{item})
+                                                                   </foreach>
+
+    </insert>
+    <update id="removeAllByRoleId">
+        UPDATE role_permission SET is_deleted=1 WHERE role_id=#{roleId}
+    </update>
+
+</mapper>
