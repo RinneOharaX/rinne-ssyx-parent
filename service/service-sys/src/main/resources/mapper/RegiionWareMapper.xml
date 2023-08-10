@@ -5,6 +5,6 @@
 <mapper namespace="com.rinneohara.ssyx.mapper.RegionWareMapper">
     <!--int insertUser();-->
     <update id="updateState">
-        UPDATE region_ware SET status=#{status} WHERE ware_id =#{id} AND is_deleted=0
+        UPDATE region_ware SET status=#{status} WHERE id =#{id} AND is_deleted=0
     </update>
 </mapper>

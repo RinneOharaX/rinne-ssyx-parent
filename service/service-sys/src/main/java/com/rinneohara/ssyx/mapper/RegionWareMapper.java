@@ -9,6 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface RegionWareMapper extends BaseMapper<RegionWare> {
 
-    void updateState(Long id,Long status);
+
+    void updateState(Long id, Long status);
 
 }

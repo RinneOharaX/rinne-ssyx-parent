@@ -16,6 +16,7 @@
     <modules>
         <module>service-sys</module>
         <module>service-acl</module>
+        <module>service-product</module>
     </modules>
 
     <properties>

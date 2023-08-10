@@ -81,7 +81,8 @@ public class RegionWareController {
                               @PathVariable Long limit,
                               RegionWareQueryVo regionWareQueryVo) {
         Page<RegionWare> regionWareIPage = new Page<>(page, limit);
-        LambdaQueryWrapper<RegionWare> like = new LambdaQueryWrapper<RegionWare>().like(RegionWare::getRegionName, regionWareQueryVo.getKeyword());
+        LambdaQueryWrapper<RegionWare> like = new LambdaQueryWrapper<RegionWare>()
+                .like(RegionWare::getRegionName, regionWareQueryVo.getKeyword()).or().like(RegionWare::getWareName,regionWareQueryVo.getKeyword());
         String keyword = regionWareQueryVo.getKeyword();
         IPage<RegionWare> pageList;
         if (!StringUtils.isEmpty(keyword)){

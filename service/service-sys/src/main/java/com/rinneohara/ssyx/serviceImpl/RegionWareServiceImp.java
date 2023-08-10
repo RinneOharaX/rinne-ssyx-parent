@@ -25,7 +25,8 @@ public class RegionWareServiceImp extends ServiceImpl<RegionWareMapper, RegionWa
     RegionWareMapper regionWareMapper;
     @Override
     public void updateState(Long id, Long status) {
-        regionWareMapper.updateState(id,status);
+            regionWareMapper.updateState(id,status);
+
     }
 
     @Override
