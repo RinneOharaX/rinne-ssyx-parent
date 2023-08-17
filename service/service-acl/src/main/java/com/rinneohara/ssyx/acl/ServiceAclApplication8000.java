@@ -18,6 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 @EnableSwagger2WebMvc
 @SpringBootApplication
 @ComponentScan("com.rinneohara.ssyx.*")
+
 public class ServiceAclApplication8000 {
     public static void main(String[] args) {
         SpringApplication.run(ServiceAclApplication8000.class,args);

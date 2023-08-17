@@ -4,53 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c5647a-3804-42e0-8051-5a8de7f4d138" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service/service-product/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/ServiceProductApplication8002.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/AttrController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/AttrGroupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/SkuInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/AttrGroupMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/AttrMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/CategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/CommentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/CommentReplayMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/SkuAttrValueMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/SkuImageMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/SkuInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/SkuPosterMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/SkuStockHistoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/AttrGroupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/AttrService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/CommentReplayService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/SkuAttrValueService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/SkuImageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/SkuInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/SkuPosterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/SkuStockHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/AttrGroupServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/AttrServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/CommentReplayServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/CommentServiceIml.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuAttrValueServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuImageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuPosterServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuStockHistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/application.yaml" afterDir="false" />
+    <list default="true" id="e0c5647a-3804-42e0-8051-5a8de7f4d138" name="Changes" comment="third">
+      <change afterPath="$PROJECT_DIR$/common/rabbit-util/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/rabbit-util/src/main/java/com/rinneohara/ssyx/config/MQProducerAckConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/rabbit-util/src/main/java/com/rinneohara/ssyx/config/MQconfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/rabbit-util/src/main/java/com/rinneohara/ssyx/constant/RabbitMqConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/rabbit-util/src/main/java/com/rinneohara/ssyx/service/RabbitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-client/service-product-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-client/service-product-client/src/main/java/com/rinneohara/ssyx/client/ProductFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/FileUploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/ProductInnerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/FileUploadService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/FileUploadServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-search/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/ServiceSearchApplication8003.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/controller/SkuApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/receiver/SkuReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/repository/SkuRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/service/SkuApiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuApiServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-search/src/main/resources/application-dev.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-search/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/controller/RegionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/controller/RegionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/controller/RegionWareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/controller/RegionWareController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/mapper/RegionWareMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/mapper/RegionWareMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/serviceImpl/RegionWareServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/serviceImpl/RegionWareServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/resources/mapper/RegiionWareMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/resources/mapper/RegiionWareMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/rinneohara/ssyx/acl/ServiceAclApplication8000.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/rinneohara/ssyx/acl/ServiceAclApplication8000.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/ServiceProductApplication8002.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/ServiceProductApplication8002.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/SkuInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/SkuInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/SkuImageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/SkuImageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/SkuInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/mapper/SkuInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/SkuInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/SkuInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuImageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/application-dev.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/resources/application-dev.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +77,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2TKMiWcDmWIM1FhhA0cIkCtKhG6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -92,46 +87,51 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-1.8",
-    "last_opened_file_path": "D:/IntelliJ IDEA 2022.1.2/rinne-ssyx-parent/service/service-product/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.11035156",
-    "project.structure.side.proportion": "0.21451788",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "spring.configuration.checksum": "10ded36eb4d0d3c21f020ce3b3c175dd",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IntelliJ IDEA 2022.1.2/rinne-ssyx-parent/service/service-product/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.11035156&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.21451788&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;277582113eb2b4021b18001eea1ab829&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.rinneohara.ssyx.service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IntelliJ IDEA 2022.1.2\rinne-ssyx-parent\service\service-product\src\main\resources" />
       <recent name="D:\IntelliJ IDEA 2022.1.2\rinne-ssyx-parent\common\common-util\src\main\java\com\rinneohara\utils" />
       <recent name="D:\IntelliJ IDEA 2022.1.2\rinne-ssyx-parent\model\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IntelliJ IDEA 2022.1.2\rinne-ssyx-parent\service\service-client" />
+      <recent name="D:\IntelliJ IDEA 2022.1.2\rinne-ssyx-parent\service\service-product" />
       <recent name="D:\IntelliJ IDEA 2022.1.2\rinne-ssyx-parent" />
       <recent name="D:\IntelliJ IDEA 2022.1.2\rinne-ssyx-parent\service\service-acl" />
     </key>
@@ -156,7 +156,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceSysApplication8001">
+  <component name="RunManager" selected="Spring Boot.ServiceProductApplication8002">
     <configuration name="AclApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.rinneohara.ssyx.acl.AclApplication" />
@@ -183,6 +183,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServiceProductApplication8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-product" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.rinneohara.ssyx.ServiceProductApplication8002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rinneohara.ssyx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceSearchApplication8003" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.rinneohara.ssyx.ServiceSearchApplication8003" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rinneohara.ssyx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServiceSysApplication8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service-sys" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.rinneohara.ssyx.ServiceSysApplication8001" />
@@ -196,11 +222,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ServiceSearchApplication8003" />
+      <item itemvalue="Spring Boot.AclApplication" />
+      <item itemvalue="Spring Boot.ServiceSysApplication8001" />
+      <item itemvalue="Spring Boot.ServiceAclApplication8000" />
+      <item itemvalue="Spring Boot.ServiceProductApplication8002" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ServiceSysApplication8001" />
+        <item itemvalue="Spring Boot.ServiceSearchApplication8003" />
+        <item itemvalue="Spring Boot.ServiceProductApplication8002" />
         <item itemvalue="Spring Boot.ServiceAclApplication8000" />
-        <item itemvalue="Spring Boot.AclApplication" />
+        <item itemvalue="Spring Boot.ServiceSysApplication8001" />
         <item itemvalue="Spring Boot.AclApplication" />
       </list>
     </recent_temporary>
@@ -222,8 +256,24 @@
       <workItem from="1691139552990" duration="13106000" />
       <workItem from="1691482369420" duration="6167000" />
       <workItem from="1691571634761" duration="6969000" />
-      <workItem from="1691645792418" duration="9995000" />
+      <workItem from="1691645792418" duration="10372000" />
+      <workItem from="1691657836650" duration="11725000" />
+      <workItem from="1691744454991" duration="8277000" />
+      <workItem from="1692003595554" duration="9024000" />
+      <workItem from="1692089825157" duration="7084000" />
+      <workItem from="1692172649219" duration="3163000" />
+      <workItem from="1692239276089" duration="8918000" />
+      <workItem from="1692253669025" duration="1081000" />
+      <workItem from="1692255212986" duration="4588000" />
     </task>
+    <task id="LOCAL-00001" summary="third">
+      <created>1691657525908</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691657525908</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +289,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="third" />
+    <option name="LAST_COMMIT_MESSAGE" value="third" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

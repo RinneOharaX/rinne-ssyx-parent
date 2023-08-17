@@ -12,6 +12,18 @@ spring:
     url: jdbc:mysql://localhost:3306/shequ-product?characterEncoding=utf-8&useSSL=false
     username: root
     password: zxy902
+  rabbitmq:
+    host: 192.168.153.100
+    port: 5672
+    username: rinneohara
+    password: zxy902
+    publisher-confirm-type: CORRELATED
+    publisher-returns: true
+    listener:
+      simple:
+        prefetch: 1
+        concurrency: 3
+        acknowledge-mode: manual
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
@@ -19,4 +31,10 @@ spring:
   cloud:
     nacos:
       discovery:
-        register-enabled: false
+        register-enabled: true
+
+aliyun:
+  endpoint: oss-cn-shanghai.aliyuncs.com
+  keyid: LTAI5tEfoVW4hgeYudXFgvg4
+  keysecret: BdLaCuMqnBdzhxUHYbACv9oyBfwPlX
+  bucketname: rinne-ssys

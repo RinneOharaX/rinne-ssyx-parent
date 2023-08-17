@@ -8,4 +8,5 @@ import javax.annotation.MatchesPattern;
 
 @Mapper
 public interface SkuInfoMapper extends BaseMapper<SkuInfo> {
+
 }

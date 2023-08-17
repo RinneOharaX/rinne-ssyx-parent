@@ -1,23 +1,28 @@
 package com.rinneohara.ssyx;
-import org.mybatis.spring.annotation.MapperScan;
+
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
-import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
+import org.springframework.stereotype.Service;
 
 /**
  * @PROJECT_NAME: rinne-ssyx-parent
  * @DESCRIPTION:
  * @USER: Administrator
- * @DATE: 2023/8/10 13:24
+ * @DATE: 2023/8/16 11:24
  */
-@EnableSwagger2WebMvc
 @SpringBootApplication
+@EnableDiscoveryClient
+@EnableKnife4j
+@EnableRabbit
 @ComponentScan("com.rinneohara.ssyx.*")
-@MapperScan("com.rinneohara.ssyx.mapper")
-public class ServiceProductApplication8002 {
+@EnableFeignClients
+public class ServiceSearchApplication8003 {
     public static void main(String[] args) {
-        SpringApplication.run(ServiceProductApplication8002.class,args);
+        SpringApplication.run(ServiceSearchApplication8003.class,args);
     }
 }

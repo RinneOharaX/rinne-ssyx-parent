@@ -7,9 +7,11 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.rinneohara.ssyx.common.result.Result;
 import com.rinneohara.ssyx.model.base.BaseEntity;
 import com.rinneohara.ssyx.model.product.SkuInfo;
+import com.rinneohara.ssyx.service.FileUploadService;
 import com.rinneohara.ssyx.service.SkuImageService;
 import com.rinneohara.ssyx.service.SkuInfoService;
 import com.rinneohara.ssyx.vo.product.SkuInfoQueryVo;
+import com.rinneohara.ssyx.vo.product.SkuInfoVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -36,6 +38,9 @@ public class SkuInfoController {
     @Autowired
     private SkuInfoService skuInfoService;
 
+    @Autowired
+    private FileUploadService fileUploadService;
+
     // getPageList(page, limit, searchObj) {
     //    return request({
     //      url: `${api_name}/${page}/${limit}`,
@@ -49,15 +54,24 @@ public class SkuInfoController {
                               @PathVariable Long limit,
                               SkuInfoQueryVo skuInfoQueryVo){
         IPage<SkuInfo> pageRule =new Page<>(page,limit);
-        String skuName = skuInfoQueryVo.getKeyword();
-        IPage<SkuInfo> pageList;
-        if (!StringUtils.isEmpty(skuName)){
-            pageList=skuInfoService.getBaseMapper().selectPage(pageRule,new LambdaQueryWrapper<SkuInfo>()
-                    .like(SkuInfo::getSkuName,skuName));
-        }else {
-            pageList=skuInfoService.getBaseMapper().selectPage(pageRule,null);
+        String keyword = skuInfoQueryVo.getKeyword();
+        String skuType = skuInfoQueryVo.getSkuType();
+        Long categoryId = skuInfoQueryVo.getCategoryId();
+        //封装条件
+        LambdaQueryWrapper<SkuInfo> wrapper = new LambdaQueryWrapper<>();
+        if(!StringUtils.isEmpty(keyword)) {
+            wrapper.like(SkuInfo::getSkuName,keyword);
         }
-        return Result.ok(pageList);
+        if(!StringUtils.isEmpty(skuType)) {
+            wrapper.eq(SkuInfo::getSkuType,skuType);
+        }
+        if(!StringUtils.isEmpty(categoryId)) {
+            wrapper.eq(SkuInfo::getCategoryId,categoryId);
+        }
+        //调用方法查询
+        IPage<SkuInfo> skuInfoPage = skuInfoService.getBaseMapper().selectPage(pageRule, wrapper);
+
+        return Result.ok(skuInfoPage);
     }
     //  getById(id) {
     //    return request({
@@ -96,8 +110,8 @@ public class SkuInfoController {
     //  },
     @ApiOperation("根据Id修改sku")
     @PutMapping("/update")
-    public  Result updateById(@RequestBody SkuInfo skuInfo){
-        skuInfoService.updateById(skuInfo);
+    public  Result updateById(@RequestBody SkuInfoVo skuInfoVo){
+        skuInfoService.updateSkuInfoVo(skuInfoVo);
         return Result.ok("修改成功");
     }
     //  removeById(id) {
@@ -137,7 +151,7 @@ public class SkuInfoController {
     @GetMapping("/publish/{id}/{status}")
     public Result publish(@PathVariable Long id,
                           @PathVariable Long status){
-        skuInfoService.update(new LambdaUpdateWrapper<SkuInfo>().set(SkuInfo::getPublishStatus,status).eq(BaseEntity::getId,id));
+        skuInfoService.publish(id,status);
         return Result.ok("商品上架成功");
     }
     //  //商品审核

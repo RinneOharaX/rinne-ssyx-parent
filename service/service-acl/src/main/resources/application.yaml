@@ -5,7 +5,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        enabled: false
+        enabled: true
   application:
     name: ssyx-acl
   datasource:
