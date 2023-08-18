@@ -18,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import com.rinneohara.ssyx.repository.*;
 
 import java.util.List;
 
@@ -40,6 +41,10 @@ public class SkuInfoController {
 
     @Autowired
     private FileUploadService fileUploadService;
+
+    @Autowired
+    private  SkuRepository skuRepository;
+
 
     // getPageList(page, limit, searchObj) {
     //    return request({
@@ -64,6 +69,7 @@ public class SkuInfoController {
         }
         if(!StringUtils.isEmpty(skuType)) {
             wrapper.eq(SkuInfo::getSkuType,skuType);
+
         }
         if(!StringUtils.isEmpty(categoryId)) {
             wrapper.eq(SkuInfo::getCategoryId,categoryId);
@@ -124,6 +130,7 @@ public class SkuInfoController {
     @DeleteMapping("/remove/{id}")
     public Result removeById(@PathVariable Long id){
         skuInfoService.removeById(id);
+        skuRepository.deleteById(id);
         return Result.ok("删除成功");
     }
     //  removeRows(idList) {
@@ -137,6 +144,9 @@ public class SkuInfoController {
     @DeleteMapping("/batchRemove")
     public Result removeRows(@RequestBody List<Long> idList){
         skuInfoService.removeByIds(idList);
+        idList.forEach(id->{
+            skuRepository.deleteById(id);
+        });
         return Result.ok("批量删除成功");
     }
     //  //商品上架

@@ -59,7 +59,7 @@ public class SkuApiServiceImpl implements SkuApiService {
     }
 
     @Override
-    public void lowerGoods(Long skuId) {
+    public void lowerGoods(Long skuId) {;
         skuEsRepository.deleteById(skuId);
     }
 }
