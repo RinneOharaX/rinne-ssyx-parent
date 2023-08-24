@@ -2,8 +2,11 @@ package com.rinneohara.ssyx.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.rinneohara.ssyx.model.activity.ActivityInfo;
+import com.rinneohara.ssyx.model.product.SkuInfo;
 import com.rinneohara.ssyx.vo.activity.ActivityRuleVo;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * <p>
@@ -18,5 +21,5 @@ public interface ActivityInfoService extends IService<ActivityInfo> {
 
     void saveActivityRule(ActivityRuleVo activityRuleVo);
 
-    Object findSkuInfoByKeyword(String keyword);
+    List<SkuInfo> findSkuInfoByKeyword(String keyword);
 }

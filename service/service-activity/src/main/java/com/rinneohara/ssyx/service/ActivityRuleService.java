@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.rinneohara.ssyx.model.activity.ActivityRule;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 /**
  * <p>
  * 优惠规则 服务类
@@ -15,4 +17,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface ActivityRuleService extends IService<ActivityRule> {
 
+    Map<String, Object> findActivityRuleList(Long activityId);
 }

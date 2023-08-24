@@ -5,48 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0c5647a-3804-42e0-8051-5a8de7f4d138" name="Changes" comment="third">
-      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/rinneohara/ssyx/common/code/CodeGet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/ServiceActivityApplication8004.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/ActivityInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/ActivityRuleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/ActivitySkuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/CouponInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/CouponRangeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/CouponUseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/ActivityInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/ActivityRuleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/ActivitySkuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/CouponInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/CouponRangeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/CouponUseServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/ActivityInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/ActivityRuleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/ActivitySkuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/CouponInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/CouponRangeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/CouponUseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/ActivityInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/ActivityRuleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/ActivitySkuMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/CouponInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/CouponRangeMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/CouponUseMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/ActivityInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/ActivityRuleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/ActivitySkuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/CouponInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/CouponRangeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/CouponUseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/ActivityInfoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/service-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/SkuInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/SkuInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuApiServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuApiServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/ServiceActivityApplication8004.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/ServiceActivityApplication8004.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/ActivityInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/ActivityInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/CouponInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/CouponInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/ActivityInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/ActivityInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/ActivityRuleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/ActivityRuleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/CouponInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/CouponInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/ActivityInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/ActivityInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/ActivityInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/ActivityInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/ActivityRuleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/ActivityRuleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/CouponInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/CouponInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-client/service-product-client/src/main/java/com/rinneohara/ssyx/client/ProductFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-client/service-product-client/src/main/java/com/rinneohara/ssyx/client/ProductFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/ProductInnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/ProductInnerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +32,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="mybatis-mapper" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="mybatis-mapper" />
       </list>
     </option>
   </component>
@@ -111,8 +86,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.11035156",
     "project.structure.side.proportion": "0.21451788",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "spring.configuration.checksum": "277582113eb2b4021b18001eea1ab829",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files",
+    "spring.configuration.checksum": "f9cb3ad008d9bc9e3f18aa60089a2c4f",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -261,6 +236,8 @@
       <workItem from="1692253669025" duration="1081000" />
       <workItem from="1692255212986" duration="4588000" />
       <workItem from="1692327686603" duration="11487000" />
+      <workItem from="1692758368533" duration="15392000" />
+      <workItem from="1692781849556" duration="16436000" />
     </task>
     <task id="LOCAL-00001" summary="third">
       <created>1691657525908</created>

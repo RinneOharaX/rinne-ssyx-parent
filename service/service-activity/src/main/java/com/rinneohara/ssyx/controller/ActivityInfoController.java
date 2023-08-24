@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -47,12 +48,16 @@ public class ActivityInfoController {
     //      method: 'get'
     //    })
     //  },
-    @ApiOperation("优惠劵分页信息")
+    @ApiOperation("活动分页信息")
     @GetMapping("/{page}/{limit}")
     public Result getPageList(@PathVariable Long page,
                               @PathVariable Long limit){
         IPage<ActivityInfo> pageRule=new Page<>(page,limit);
         IPage<ActivityInfo> pageList = activityInfoService.page(pageRule);
+        List<ActivityInfo> records = pageList.getRecords();
+        records.forEach(item->{
+            item.setActivityTypeString(item.getActivityType().getComment());
+        });
         return Result.ok(pageList);
     }
     //  getById(id) {
@@ -62,7 +67,7 @@ public class ActivityInfoController {
     //    })
     //  },
     //
-    @ApiOperation("根据id查询对应优惠劵")
+    @ApiOperation("根据id查询对应活动")
     @GetMapping("/get/{id}")
     public Result getById(@PathVariable Long id){
         ActivityInfo activity = activityInfoService.getById(id);
@@ -76,7 +81,7 @@ public class ActivityInfoController {
     //    })
     //  },
     //
-    @ApiOperation("保存优惠劵信息")
+    @ApiOperation("保存活动信息")
     @PostMapping("/save")
     public Result save(@RequestBody ActivityInfo activityInfo){
         activityInfoService.save(activityInfo);
@@ -89,7 +94,7 @@ public class ActivityInfoController {
     //      data: role
     //    })
     //  },
-    @ApiOperation("修改优惠劵信息")
+    @ApiOperation("修改活动信息")
     @PutMapping("/update")
     public Result update(@RequestBody ActivityInfo activityInfo){
         activityInfoService.updateById(activityInfo);
@@ -101,7 +106,7 @@ public class ActivityInfoController {
     //      method: 'delete'
     //    })
     //  },
-    @ApiOperation("根据id删除优惠劵信息")
+    @ApiOperation("根据id删除活动信息")
     @DeleteMapping("/remove/{id}")
     public  Result removeById(@PathVariable Long id){
         activityInfoService.removeById(id);
@@ -114,7 +119,7 @@ public class ActivityInfoController {
     //      data: idList
     //    })
     //  },
-    @ApiOperation("根据IdList批量删除优惠劵信息")
+    @ApiOperation("根据IdList批量删除活动信息")
     @DeleteMapping("/batchRemove")
     public Result removeRows(@RequestBody List<Long> idList){
         if (!CollectionUtils.isEmpty(idList)){
@@ -131,20 +136,20 @@ public class ActivityInfoController {
     //      method: 'get'
     //    })
     //  },
-    @ApiOperation("根据优惠劵id查找对应优惠规则")
+    @ApiOperation("根据活动id查找活动规则数据")
     @GetMapping("/findActivityRuleList/{id}")
     public Result findActivityRuleList(@PathVariable(value = "id") Long activityId){
-        ActivityRule activityRule = activityRuleService.getOne(new LambdaQueryWrapper<ActivityRule>().eq(ActivityRule::getActivityId, activityId));
-        return Result.ok(activityRule);
+        Map<String,Object> activityRuleMap = activityRuleService.findActivityRuleList(activityId);
+        return Result.ok(activityRuleMap);
     }
     //  saveActivityRule(rule) {
     //    return request({
     //      url: `${api_name}/saveActivityRule`,
     //      method: 'post',
     //      data: rule
-    //    })
+    //    })Q
     //  },
-    @ApiOperation("保存优惠劵规则")
+    @ApiOperation("保存活动规则")
     @PostMapping("/saveActivityRule")
     public Result saveActivityRule(@RequestBody ActivityRuleVo activityRuleVo){
         activityInfoService.saveActivityRule(activityRuleVo);
