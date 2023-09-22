@@ -15,6 +15,7 @@
         <module>service/service-acl</module>
         <module>service/service-search</module>
         <module>service/service-client/service-product-client</module>
+        <module>service-gateway</module>
     </modules>
 
     <parent>

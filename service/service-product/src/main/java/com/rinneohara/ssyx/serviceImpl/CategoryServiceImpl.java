@@ -6,6 +6,8 @@ import com.rinneohara.ssyx.model.product.Category;
 import com.rinneohara.ssyx.service.CategoryService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @PROJECT_NAME: rinne-ssyx-parent
  * @DESCRIPTION:
@@ -14,4 +16,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> implements CategoryService {
+    @Override
+    public List<Category> findAllList() {
+        List<Category> categoryList = baseMapper.selectList(null);
+        return categoryList;
+    }
 }

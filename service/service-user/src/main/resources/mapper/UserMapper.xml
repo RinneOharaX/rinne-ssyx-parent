@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rinneohara.ssyx.mapper.UserMapper">
+    <!--int insertUser();-->
+    <resultMap id="map" type="com.rinneohara.ssyx.vo.user.UserLoginVo">
+        <id property="userId" column="id"/>
+        <collection property="isNew" column="is_new"/>
+        <collection property="nickName" column="nick_name"/>
+        <collection property="photoUrl" column="photo_url"/>
+        <collection property="openId" column="open_id"/>
+        <collection property="wareId" column="ware_id"/>
+        <collection property="leaderId" column="leader_id"/>
+    </resultMap>
+
+    <select id="getUserLoginVo" resultType="com.rinneohara.ssyx.vo.user.UserLoginVo">
+        SELECT u.id user_id,u.photo_url,u.nick_name,u.open_id,u.is_new,d.leader_id,d.ware_id
+        FROM user u
+        LEFT JOIN user_delivery d
+        ON u.id=d.user_id
+        WHERE u.id=#{id}
+    </select>
+
+
+
+    <select id="getLeaderAddressVoByUserId" resultType="com.rinneohara.ssyx.vo.user.LeaderAddressVo">
+        SELECT
+            u.user_id,
+            l.id,
+            NAME,-
+            l.phone,
+            u.ware_id,
+            l.take_name,
+            l.province,
+            l.city,
+            l.district,
+            l.detail_address,
+            l.longitude,
+            l.latitude,
+            l.store_path,
+            u.is_deleted
+        FROM
+            leader l
+                LEFT JOIN user_delivery u ON l.id = u.leader_id
+        WHERE
+            u.user_id = #{id}
+          AND u.is_deleted = 0
+    </select>
+</mapper>

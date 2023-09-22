@@ -5,13 +5,17 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 @Data
 @ApiModel(description = "SkuInfo")
 @TableName("sku_info")
+@NoArgsConstructor
+@AllArgsConstructor
 public class SkuInfo extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;

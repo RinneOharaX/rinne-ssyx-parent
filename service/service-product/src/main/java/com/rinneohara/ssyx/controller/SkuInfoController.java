@@ -34,7 +34,6 @@ import java.util.List;
 @RestController
 @Api("SKU管理")
 @RequestMapping("/admin/product/skuInfo")
-@CrossOrigin
 public class SkuInfoController {
     @Autowired
     private SkuInfoService skuInfoService;

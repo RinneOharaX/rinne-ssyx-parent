@@ -23,7 +23,6 @@ import java.util.List;
 @RestController
 @Api(tags = "区域管理")
 @Slf4j
-@CrossOrigin
 @RequestMapping("/admin/sys/region")
 public class RegionController {
 

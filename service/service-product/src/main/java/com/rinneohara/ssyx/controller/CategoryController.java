@@ -26,7 +26,6 @@ import java.util.List;
 
 @RestController
 @Slf4j
-@CrossOrigin
 @RequestMapping("/admin/product/category")
 @ApiOperation("商品分类管理")
 public class CategoryController {

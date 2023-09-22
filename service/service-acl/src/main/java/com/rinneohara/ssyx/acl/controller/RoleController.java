@@ -31,7 +31,6 @@ import java.util.Map;
 @RestController
 @RequestMapping("/admin/acl/role")
 @Slf4j
-@CrossOrigin
 public class RoleController {
     @Resource
     private RoleService roleService;

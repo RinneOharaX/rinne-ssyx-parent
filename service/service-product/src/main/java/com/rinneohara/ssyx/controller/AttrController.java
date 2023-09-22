@@ -21,7 +21,6 @@ import java.util.List;
 
 @Api("平台属性管理")
 @RestController
-@CrossOrigin
 @Slf4j
 @RequestMapping("/admin/product/attr")
 public class AttrController  {

@@ -7,7 +7,7 @@ spring:
       discovery:
         enabled: true
   application:
-    name: ssyx-acl
+    name: service-acl
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver

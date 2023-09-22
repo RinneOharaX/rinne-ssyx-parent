@@ -35,6 +35,6 @@ spring:
 
 aliyun:
   endpoint: oss-cn-shanghai.aliyuncs.com
-  keyid: LTAI5tEfoVW4hgeYudXFgvg4
-  keysecret: BdLaCuMqnBdzhxUHYbACv9oyBfwPlX
+  keyid: LTAI5tBvKrAUxAVF48X7GfAM
+  keysecret: FdJraFGtCs33PECbxFMG6sB3spQTXI
   bucketname: rinne-ssys

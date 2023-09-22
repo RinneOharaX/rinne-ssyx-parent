@@ -28,7 +28,6 @@ import java.util.List;
 @RestController
 @Api(tags = "区域仓库管理")
 @Slf4j
-@CrossOrigin
 @RequestMapping("/admin/sys/regionWare")
 public class RegionWareController {
     @Resource

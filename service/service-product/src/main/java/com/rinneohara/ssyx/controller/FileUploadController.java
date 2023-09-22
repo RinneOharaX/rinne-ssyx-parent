@@ -19,7 +19,6 @@ import org.springframework.web.multipart.MultipartFile;
  */
 @RestController
 @Slf4j
-@CrossOrigin
 @RequestMapping("/admin/product")
 @ApiOperation("文件上传接口")
 public class FileUploadController {

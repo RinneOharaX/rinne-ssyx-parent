@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service-user
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+wx:
+  open:
+    # 小程序微信公众平台appId
+    app_id: wx9588c19756ede91d
+    # 小程序微信公众平台api秘钥
+    app_secret: f73a649e350201eadd4f99c9531c5b03

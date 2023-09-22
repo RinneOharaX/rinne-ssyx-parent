@@ -3,6 +3,7 @@ package com.rinneohara.ssyx.vo.user;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.springframework.data.elasticsearch.annotations.Field;
 
 import java.io.Serializable;
 
@@ -11,6 +12,7 @@ import java.io.Serializable;
 public class UserLoginVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
 
 	@ApiModelProperty(value = "用户id")
 	private Long userId;

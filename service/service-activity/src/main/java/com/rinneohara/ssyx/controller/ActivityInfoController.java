@@ -35,7 +35,6 @@ import java.util.Map;
 @RestController
 @RequestMapping("/admin/activity/activityInfo")
 @Api(tags = "优惠劵信息接口")
-@CrossOrigin
 public class ActivityInfoController {
     @Autowired
     ActivityInfoService activityInfoService;

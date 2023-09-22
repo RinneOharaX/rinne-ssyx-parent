@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rinneohara.ssyx.mapper.ActivityInfoMapper">
+
+    <resultMap id="ActivityRuleMap" type="com.rinneohara.ssyx.model.activity.ActivityRule" autoMapping="true"></resultMap>
+    <select id="selectActivityRuleList" resultMap="ActivityRuleMap">
+        select distinct
+            info.activity_type as activityType,
+            rule.id,rule.activity_id,rule.condition_amount,rule.condition_num,rule.benefit_amount,rule.benefit_discount
+        from activity_info info
+                 inner join activity_sku sku on sku.activity_id = info.id
+                 inner join activity_rule rule on rule.activity_id = info.id
+        where
+            sku.sku_id = #{skuId}
+          and now() between info.start_time and info.end_time and rule.is_deleted=0
+        order by rule.condition_amount desc, rule.condition_num desc
+    </select>
+    <select id="selectExistedSkuId" resultType="java.lang.Long">
+        SELECT sku.sku_id
+        FROM activity_info info INNER JOIN activity_sku sku ON  info.id =sku.activity_id <where>
+        <if test="skuIdList !=null ">
+            AND  sku.sku_id IN
+            <foreach collection="skuIdList" item="item" separator="," index="index" open="(" close=")">
+                #{item}
+            </foreach>
+        </if>
+    </where>
+        AND NOW() BETWEEN info.start_time AND info.end_time
+    </select>
+    <select id="findActivityRuleBySkuId" resultType="com.rinneohara.ssyx.model.activity.ActivityRule">
+        SELECT
+            activity_id,
+            activity_type,
+            condition_amount,
+            condition_num,
+            benefit_discount
+        FROM
+            activity_rule
+        WHERE
+                activity_id = (
+                SELECT
+                    activity_id
+                FROM
+                    activity_sku
+                WHERE
+                    sku_id = #{id}
+                  AND is_deleted = 0
+            )
+          AND is_deleted = 0
+    </select>
+    <select id="selectCartActivityList" resultType="com.rinneohara.ssyx.model.activity.ActivitySku">
+            select
+            info.id as activityId,
+            sku.sku_id as skuId
+            from activity_info info
+            inner join activity_sku sku on info.id = sku.activity_id
+            <where>
+                and sku.sku_id in
+                <foreach collection="skuIdList" item="item" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+                and now() between info.start_time and info.end_time and sku.is_deleted=0
+            </where>
+    </select>
+    <select id="selectSkuIdListByAcitivityId" resultType="java.lang.Long">
+        select
+            info.id as activityId,
+            sku.sku_id as skuId
+        from activity_info info
+                 inner join activity_sku sku on info.id = sku.activity_id
+        WHERE info.id=#{activityId}
+          and now() between info.start_time and info.end_time AND sku.is_deleted=0
+    </select>
+
+
+</mapper>

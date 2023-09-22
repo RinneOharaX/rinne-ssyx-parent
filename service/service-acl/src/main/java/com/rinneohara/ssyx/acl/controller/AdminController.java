@@ -26,7 +26,6 @@ import java.util.Map;
  * @DATE: 2023/8/2 13:07
  */
 
-@CrossOrigin
 @RestController
 @Slf4j
 @Api(tags = "用户管理")

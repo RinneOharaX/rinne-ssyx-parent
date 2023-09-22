@@ -2,11 +2,15 @@ package com.rinneohara.ssyx.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.rinneohara.ssyx.model.activity.ActivityInfo;
+import com.rinneohara.ssyx.model.activity.ActivityRule;
+import com.rinneohara.ssyx.model.order.CartInfo;
 import com.rinneohara.ssyx.model.product.SkuInfo;
 import com.rinneohara.ssyx.vo.activity.ActivityRuleVo;
+import com.rinneohara.ssyx.vo.order.OrderConfirmVo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -22,4 +26,14 @@ public interface ActivityInfoService extends IService<ActivityInfo> {
     void saveActivityRule(ActivityRuleVo activityRuleVo);
 
     List<SkuInfo> findSkuInfoByKeyword(String keyword);
+
+    Map<Long, List<String>> findActivity(List<Long> skuIdList);
+
+    Map<String, Object> findActivityAndCoupon(Long skuId, Long userId);
+
+    List<ActivityRule> findActivityRule(Long skuId);
+
+    OrderConfirmVo findCartActivityAndCoupon(List<CartInfo> cartInfoList, Long userId);
+
+//    Map<Long, List<String>>  findActivityNameBySkuList(List<Long> skuIdList);
 }

@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.rinneohara.ssyx.model.activity.CouponInfo;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * <p>
  * 优惠券信息 Mapper 接口
@@ -16,4 +18,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface CouponInfoMapper extends BaseMapper<CouponInfo> {
 
+    List<CouponInfo> selectCouponInfoList(Long id, Long categoryId, Long userId);
 }

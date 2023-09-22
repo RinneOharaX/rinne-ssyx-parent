@@ -40,6 +40,9 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo> impl
     @Autowired
     SkuAttrValueService skuAttrValueService;
 
+    @Autowired
+    SkuInfoService skuInfoService;
+
     @Resource
     RabbitService rabbitService;
 
@@ -109,4 +112,48 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo> impl
                                         RabbitMqConst.ROUTING_GOODS_LOWER,
                                         id);}
         }
+
+    @Override
+    public List<SkuInfo> findNewPersonList() {
+        List<SkuInfo> skuInfoList = baseMapper.selectList(new LambdaQueryWrapper<SkuInfo>().eq(SkuInfo::getIsNewPerson, 1));
+
+        return skuInfoList;
+
+
+    }
+
+    @Override
+    public SkuInfoVo getSkuInfoVo(Long skuId) {
+        SkuInfo skuInfo = baseMapper.selectById(skuId);
+        SkuInfoVo skuInfoVo =new SkuInfoVo();
+        skuInfoVo.setCategoryId(skuInfo.getCategoryId());
+        skuInfoVo.setAttrGroupId(skuInfo.getAttrGroupId());
+        skuInfoVo.setSkuType(skuInfo.getSkuType());
+        skuInfoVo.setSkuName(skuInfo.getSkuName());
+        skuInfoVo.setImgUrl(skuInfo.getImgUrl());
+        skuInfoVo.setPerLimit(skuInfo.getPerLimit());
+        skuInfoVo.setPublishStatus(skuInfo.getPublishStatus());
+        skuInfoVo.setCheckStatus(skuInfo.getCheckStatus());
+        skuInfoVo.setIsNewPerson(skuInfo.getIsNewPerson());
+        skuInfoVo.setSort(skuInfo.getSort());
+        skuInfoVo.setSkuCode(skuInfo.getSkuCode());
+        skuInfoVo.setPrice(skuInfo.getPrice());
+        skuInfoVo.setMarketPrice(skuInfo.getMarketPrice());
+        skuInfoVo.setStock(skuInfo.getStock());
+        skuInfoVo.setLockStock(skuInfo.getLockStock());
+        skuInfoVo.setLowStock(skuInfo.getLowStock());
+        skuInfoVo.setSale(skuInfo.getSale());
+        skuInfoVo.setWareId(skuInfo.getWareId());
+        skuInfoVo.setId(skuInfo.getId());
+        skuInfoVo.setCreateTime(skuInfo.getCreateTime());
+        skuInfoVo.setUpdateTime(skuInfo.getUpdateTime());
+        skuInfoVo.setIsDeleted(skuInfo.getIsDeleted());
+        List<SkuPoster> skuPosterList = skuPosterService.getBaseMapper().selectList(new LambdaQueryWrapper<SkuPoster>().eq(SkuPoster::getSkuId, skuId));
+        List<SkuAttrValue> skuAttrValueList = skuAttrValueService.getBaseMapper().selectList(new LambdaQueryWrapper<SkuAttrValue>().eq(SkuAttrValue::getSkuId,skuId));
+        List<SkuImage> skuImages = skuImageService.getBaseMapper().selectList(new LambdaQueryWrapper<SkuImage>().eq(SkuImage::getSkuId, skuId));
+        skuInfoVo.setSkuPosterList(skuPosterList);
+        skuInfoVo.setSkuAttrValueList(skuAttrValueList);
+        skuInfoVo.setSkuImagesList(skuImages);
+        return skuInfoVo;
+    }
 }

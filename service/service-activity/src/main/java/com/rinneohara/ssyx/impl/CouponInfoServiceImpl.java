@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.w3c.dom.ranges.Range;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -106,5 +107,12 @@ public class CouponInfoServiceImpl extends ServiceImpl<CouponInfoMapper, CouponI
         QueryWrapper<CouponInfo> couponInfoQueryWrapper = new QueryWrapper<>();
         couponInfoQueryWrapper.like("coupon_name",keyword);
         return couponInfoMapper.selectList(couponInfoQueryWrapper);
+    }
+
+    @Override
+    public List<CouponInfo> findCouponInfo(Long id, Long userId) {
+        SkuInfo skuInfo = productFeignClient.getSkuInfo(id);
+        if(null == skuInfo) return new ArrayList<>();
+        return couponInfoMapper.selectCouponInfoList(skuInfo.getId(), skuInfo.getCategoryId(), userId);
     }
 }

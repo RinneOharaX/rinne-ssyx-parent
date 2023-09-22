@@ -25,7 +25,6 @@ import java.util.List;
 
 @RestController
 @Slf4j
-@CrossOrigin
 @RequestMapping("/admin/product/attrGroup")
 @ApiOperation("平台组管理")
 public class AttrGroupController {
