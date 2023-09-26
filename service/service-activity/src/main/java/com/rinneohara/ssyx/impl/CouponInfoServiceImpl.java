@@ -10,11 +10,15 @@ import com.rinneohara.ssyx.enums.CouponRangeType;
 import com.rinneohara.ssyx.mapper.CouponInfoMapper;
 import com.rinneohara.ssyx.model.activity.CouponInfo;
 import com.rinneohara.ssyx.model.activity.CouponRange;
+import com.rinneohara.ssyx.model.activity.CouponUse;
+import com.rinneohara.ssyx.model.order.CartInfo;
 import com.rinneohara.ssyx.model.product.Category;
 import com.rinneohara.ssyx.model.product.SkuInfo;
 import com.rinneohara.ssyx.service.CouponInfoService;
 import com.rinneohara.ssyx.service.CouponRangeService;
+import com.rinneohara.ssyx.service.CouponUseService;
 import com.rinneohara.ssyx.vo.activity.CouponRuleVo;
+import com.sun.org.apache.bcel.internal.generic.LMUL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -38,9 +42,10 @@ import java.util.stream.Collectors;
 public class CouponInfoServiceImpl extends ServiceImpl<CouponInfoMapper, CouponInfo> implements CouponInfoService {
     @Autowired
     private CouponRangeService couponRangeService;
-
     @Autowired
     private  CouponInfoMapper couponInfoMapper;
+    @Autowired
+    private CouponUseService  couponUseService;
     @Autowired
     ProductFeignClient productFeignClient;
     @Override
@@ -115,4 +120,13 @@ public class CouponInfoServiceImpl extends ServiceImpl<CouponInfoMapper, CouponI
         if(null == skuInfo) return new ArrayList<>();
         return couponInfoMapper.selectCouponInfoList(skuInfo.getId(), skuInfo.getCategoryId(), userId);
     }
+
+    @Override
+    public List<CouponInfo> findCartCouponInfo(List<CartInfo> cartInfoList, Long userId) {
+        //TODO
+        //根据用户id得到所有的优惠劵信息
+        List<CouponUse> couponUses = couponUseService.getBaseMapper().selectList(new LambdaQueryWrapper<CouponUse>().eq(CouponUse::getUserId, userId));
+        List<Long> coponIds = couponUses.stream().map(CouponUse::getCouponId).collect(Collectors.toList());
+    }
+
 }

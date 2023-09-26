@@ -5,112 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0c5647a-3804-42e0-8051-5a8de7f4d138" name="Changes" comment="fifth">
-      <change afterPath="$PROJECT_DIR$/common/common-util/src/main/java/com/rinneohara/utils/JwtHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/rinneohara/ssyx/common/auth/ThreadLocalUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/rinneohara/ssyx/common/auth/UserInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/rinneohara/ssyx/common/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/rinneohara/ssyx/common/config/RedisConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/rinneohara/ssyx/common/security/LoginMvcConfigurerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-gateway/src/main/java/com/rinneohara/ssyx/ServiceGatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-gateway/src/main/java/com/rinneohara/ssyx/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-gateway/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/ActivityInnerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-activity/src/main/resources/mapper/CouponInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/rinneohara/ssyx/ServiceCartApplication8007.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/rinneohara/ssyx/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/rinneohara/ssyx/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/java/com/rinneohara/ssyx/serviceImpl/CartServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-cart/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-client/service-product-client/src/main/java/com/rinneohara/ssyx/client/ActivityFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-client/service-search-client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-client/service-search-client/src/main/java/com/rinneohara/ssyx/client/SearchFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-client/service-user-client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-client/service-user-client/src/main/java/com/rinneohara/ssyx/client/UserFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/src/main/java/com/rinneohara/ssyx/ServiceHomeApplication8006.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/src/main/java/com/rinneohara/ssyx/config/ThreadPoolConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/src/main/java/com/rinneohara/ssyx/controller/CategoryApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/src/main/java/com/rinneohara/ssyx/controller/HomeApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/src/main/java/com/rinneohara/ssyx/controller/ItemApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/src/main/java/com/rinneohara/ssyx/service/HomeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/src/main/java/com/rinneohara/ssyx/service/ItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/src/main/java/com/rinneohara/ssyx/serviceImp/HomeServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/src/main/java/com/rinneohara/ssyx/serviceImp/ItemServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-home/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/ServiceUserApplication8005.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/controller/LeaderApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/controller/WeixinApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/mapper/LeaderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/mapper/UserDeliverMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/service/LeaderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/service/UserDeliverService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/serviceImp/UserDeliverServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/serviceImp/UserServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/utils/ConstantPropertiesUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/java/com/rinneohara/ssyx/utils/HttpClientUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-user/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/rinneohara/ssyx/model/product/SkuInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/rinneohara/ssyx/model/product/SkuInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/rinneohara/ssyx/vo/user/UserLoginVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/rinneohara/ssyx/vo/user/UserLoginVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/rinneohara/ssyx/acl/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/rinneohara/ssyx/acl/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/rinneohara/ssyx/acl/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/rinneohara/ssyx/acl/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/rinneohara/ssyx/acl/controller/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/rinneohara/ssyx/acl/controller/PermissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/java/com/rinneohara/ssyx/acl/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/java/com/rinneohara/ssyx/acl/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-acl/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-acl/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/ServiceActivityApplication8004.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/ServiceActivityApplication8004.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/ActivityInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/ActivityInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/CouponInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/CouponInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/ActivityInnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/controller/ActivityInnerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/ActivityInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/ActivityInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/CouponInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/impl/CouponInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/ActivityInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/ActivityInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/CouponInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/CouponInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/ActivityInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/ActivityRuleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/ActivitySkuMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/CouponInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/CouponRangeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/mapper/xml/CouponUseMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/ActivityInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/ActivityInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/CouponInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/java/com/rinneohara/ssyx/service/CouponInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-activity/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-client/service-product-client/src/main/java/com/rinneohara/ssyx/client/ProductFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-client/service-product-client/src/main/java/com/rinneohara/ssyx/client/ProductFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/ServiceProductApplication8002.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/ServiceProductApplication8002.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/AttrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/AttrController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/AttrGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/AttrGroupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/FileUploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/ProductInnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/ProductInnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/SkuInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/controller/SkuInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/SkuInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/service/SkuInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/ActivityInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-activity/src/main/resources/mapper/ActivityInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/controller/SkuApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/controller/SkuApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/repository/SkuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/repository/SkuRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/service/SkuApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/service/SkuApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuApiServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-search/src/main/java/com/rinneohara/ssyx/serviceImpl/SkuApiServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-search/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-search/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/controller/RegionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/controller/RegionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/controller/RegionWareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/controller/RegionWareController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/controller/WareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-sys/src/main/java/com/rinneohara/ssyx/controller/WareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-client/service-product-client/src/main/java/com/rinneohara/ssyx/client/ActivityFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-client/service-product-client/src/main/java/com/rinneohara/ssyx/client/ActivityFeignClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,36 +56,36 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "13",
-    "last_opened_file_path": "D:/IntelliJ IDEA 2022.1.2/rinne-ssyx-parent/service/service-activity/src/main/resources/mapper",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.11035156",
-    "project.structure.side.proportion": "0.21451788",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "13d949d25292494498fc7b4412964585",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;13&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IntelliJ IDEA 2022.1.2/rinne-ssyx-parent/service/service-activity/src/main/resources/mapper&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.11035156&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.21451788&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;13d949d25292494498fc7b4412964585&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -385,6 +285,8 @@
       <workItem from="1695178377070" duration="12630000" />
       <workItem from="1695264106949" duration="17986000" />
       <workItem from="1695354708780" duration="15060000" />
+      <workItem from="1695619130462" duration="9638000" />
+      <workItem from="1695696172470" duration="17808000" />
     </task>
     <task id="LOCAL-00001" summary="third">
       <created>1691657525908</created>

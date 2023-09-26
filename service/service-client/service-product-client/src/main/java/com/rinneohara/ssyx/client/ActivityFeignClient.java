@@ -28,5 +28,5 @@ public interface ActivityFeignClient {
     public Map<String, Object> findActivityAndCoupon(@PathVariable("id") Long skuId, @PathVariable("userId") Long userId);
 
     @PostMapping("/api/activity/inner/findCartActivityAndCoupon/{userId}")
-    OrderConfirmVo findCartActivityAndCoupon(List<CartInfo> cartInfoList, Long userId);
+    public OrderConfirmVo findCartActivityAndCoupon(@RequestBody List<CartInfo> cartInfoList, Long userId);
 }

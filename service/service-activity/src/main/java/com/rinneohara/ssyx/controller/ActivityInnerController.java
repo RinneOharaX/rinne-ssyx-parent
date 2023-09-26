@@ -51,7 +51,7 @@ public class ActivityInnerController {
     }
 
     @PostMapping("inner/findCartActivityAndCoupon/{userId}")
-    OrderConfirmVo findCartActivityAndCoupon(@RequestBody  List<CartInfo> cartInfoList,
+    public OrderConfirmVo findCartActivityAndCoupon(@RequestBody  List<CartInfo> cartInfoList,
                                              @PathVariable("userId") Long userId){
         return activityInfoService.findCartActivityAndCoupon(cartInfoList,userId);
     };

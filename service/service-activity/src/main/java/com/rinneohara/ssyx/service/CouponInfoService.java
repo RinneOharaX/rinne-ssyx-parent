@@ -3,6 +3,7 @@ package com.rinneohara.ssyx.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.rinneohara.ssyx.model.activity.CouponInfo;
+import com.rinneohara.ssyx.model.order.CartInfo;
 import com.rinneohara.ssyx.vo.activity.CouponRuleVo;
 import org.springframework.stereotype.Service;
 
@@ -26,4 +27,6 @@ public interface CouponInfoService extends IService<CouponInfo> {
     List<CouponInfo> findCouponByKeyword(String keyword);
 
     List<CouponInfo> findCouponInfo(Long skuId, Long userId);
+
+    List<CouponInfo> findCartCouponInfo(List<CartInfo> cartInfoList, Long userId);
 }
