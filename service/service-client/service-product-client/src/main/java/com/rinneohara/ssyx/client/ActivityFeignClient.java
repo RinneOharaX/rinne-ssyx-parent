@@ -1,13 +1,13 @@
 package com.rinneohara.ssyx.client;
 
+import com.rinneohara.ssyx.common.result.Result;
+import com.rinneohara.ssyx.model.activity.CouponInfo;
 import com.rinneohara.ssyx.model.order.CartInfo;
+import com.rinneohara.ssyx.vo.order.CartInfoVo;
 import com.rinneohara.ssyx.vo.order.OrderConfirmVo;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -28,5 +28,18 @@ public interface ActivityFeignClient {
     public Map<String, Object> findActivityAndCoupon(@PathVariable("id") Long skuId, @PathVariable("userId") Long userId);
 
     @PostMapping("/api/activity/inner/findCartActivityAndCoupon/{userId}")
-    public OrderConfirmVo findCartActivityAndCoupon(@RequestBody List<CartInfo> cartInfoList, Long userId);
+    public OrderConfirmVo findCartActivityAndCoupon(@RequestBody List<CartInfo> cartInfoList, @PathVariable Long userId);
+
+
+    @PostMapping("/api/activity/inner/findCartActivityList")
+    public List<CartInfoVo> findCartActivityList(@RequestBody List<CartInfo> cartInfoList);
+
+    @PostMapping("/api/activity/inner/findRangeSkuIdList/{couponId}")
+    public CouponInfo findRangeSkuIdList(@RequestBody List<CartInfo> cartInfoList,
+                                         @PathVariable Long couponId);
+
+    @GetMapping("/api/activity/inner/updateCouponInfoUseStatus/{couponId}/{userId}/{orderId}")
+    public Result updateCouponInfoUseStatus (@PathVariable Long couponId,
+                                             @PathVariable Long userId,
+                                             @PathVariable Long orderId);
 }

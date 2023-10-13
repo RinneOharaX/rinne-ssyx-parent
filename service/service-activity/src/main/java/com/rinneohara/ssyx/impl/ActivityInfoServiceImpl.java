@@ -180,7 +180,7 @@ public class  ActivityInfoServiceImpl extends ServiceImpl<ActivityInfoMapper, Ac
         return orderConfirmVo;
     }
 
-    private List<CartInfoVo> findCartActivityList(List<CartInfo> cartInfoList) {
+    public List<CartInfoVo> findCartActivityList(List<CartInfo> cartInfoList) {
         //创建结果集合
         List<CartInfoVo> cartInfoVoList=new ArrayList<>();
         //获取所有skuId

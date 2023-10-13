@@ -16,6 +16,7 @@
         <module>service/service-search</module>
         <module>service/service-client/service-product-client</module>
         <module>service-gateway</module>
+        <module>service/service-payment</module>
     </modules>
 
     <parent>

@@ -12,13 +12,11 @@ import java.util.Date;
 
 public class JwtHelper {
 
-    private static long tokenExpiration = 365*24*60*60*1000;
     private static String tokenSignKey = "ssyx";
 
     public static String createToken(Long userId, String userName) {
         String token = Jwts.builder()
                 .setSubject("ssyx-USER")
-                .setExpiration(new Date(System.currentTimeMillis() + tokenExpiration))
                 .claim("userId", userId)
                 .claim("userName", userName)
                 .signWith(SignatureAlgorithm.HS512, tokenSignKey)
@@ -32,6 +30,7 @@ public class JwtHelper {
 
         Jws<Claims> claimsJws = Jwts.parser().setSigningKey(tokenSignKey).parseClaimsJws(token);
         Claims claims = claimsJws.getBody();
+
         Integer userId = (Integer)claims.get("userId");
         return userId.longValue();
         // return 1L;
@@ -48,11 +47,17 @@ public class JwtHelper {
     public static void removeToken(String token) {
         //jwttoken无需删除，客户端扔掉即可。
     }
-
+//    public static boolean isExpired(String token){
+//        Jws<Claims> claimsJws = Jwts.parser().setSigningKey(tokenSignKey).parseClaimsJws(token);
+//        Claims body = claimsJws.getBody();
+//        Date expiration = body.getExpiration();
+//        return expiration;
+//    }
     public static void main(String[] args) {
-        String token = JwtHelper.createToken(7L, "admin");
-        System.out.println(token);
-        System.out.println(JwtHelper.getUserId(token));
-        System.out.println(JwtHelper.getUserName(token));
+        String token="eyJhbGciOiJIUzUxMiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAAKtWKi5NUrJSKi6urNANDXYNUtJRSq0oULIyNLM0NTU2NDS30FEqLU4t8kxRsjI2hLD9EnNTgXryI32Lc8ySQnKysk2MCs3ckh2dPC0KfV0yCiLSlWoBlle6cFoAAAA.qL5JRy0z9R6vrAZmMnuOUWFlHAB4K1d89JjFNXwC6jq_zg2pCmNWrzjlvZbQCZ9oJrdxE-__3CTb4eHGDtqT6w";
+        Jws<Claims> claimsJws = Jwts.parser().setSigningKey(tokenSignKey).parseClaimsJws(token);
+        Claims body = claimsJws.getBody();
+        Date expiration = body.getExpiration();
+        System.out.println(expiration);
     }
 }

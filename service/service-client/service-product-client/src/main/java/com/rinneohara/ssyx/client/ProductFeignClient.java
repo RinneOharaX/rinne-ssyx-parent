@@ -1,14 +1,17 @@
 package com.rinneohara.ssyx.client;
 
+import com.rinneohara.ssyx.common.result.Result;
 import com.rinneohara.ssyx.model.product.Category;
 import com.rinneohara.ssyx.model.product.SkuInfo;
 import com.rinneohara.ssyx.vo.product.SkuInfoVo;
+import com.rinneohara.ssyx.vo.product.SkuStockLockVo;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
@@ -45,6 +48,10 @@ public interface ProductFeignClient {
     @ApiOperation("根据skuId，获取Sku信息")
     @GetMapping("/api/product/inner/getSkuInfoVo/{skuId}")
     public SkuInfoVo getSkuInfoVo(@PathVariable Long skuId);
+
+    @ApiOperation(value = "锁定库存")
+    @PostMapping("/api/product/inner/checkAndLock/{orderNo}")
+    public Result checkAndLock(@RequestBody List<SkuStockLockVo> skuStockLockVoList, @PathVariable("orderNo") String orderNo);
 
 
 }

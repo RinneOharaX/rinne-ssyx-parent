@@ -20,6 +20,7 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 
 /**
@@ -128,6 +129,18 @@ public class CartServiceImp implements CartService {
                 });
         }
         return cartInfoList;
+    }
+
+    @Override
+    public void deleteCheckedCart(Long userId) {
+        List<CartInfo> cartList = this.getCartList(userId);
+        List<CartInfo> isCheckedCartList = cartList.stream().filter(cartInfo -> cartInfo.getIsChecked() == 1).collect(Collectors.toList());
+        List<Long> checkedSkuIds = isCheckedCartList.stream().map(CartInfo::getSkuId).collect(Collectors.toList());
+        String cartKey= RedisConst.USER_KEY_PREFIX + userId;
+        BoundHashOperations<String,String,CartInfo> boundHashOperations = redisTemplate.boundHashOps(cartKey);
+        checkedSkuIds.forEach(skuId->{
+            boundHashOperations.delete(skuId.toString());
+        });
     }
 
     public void setCartKeyExpire(String cartKey){

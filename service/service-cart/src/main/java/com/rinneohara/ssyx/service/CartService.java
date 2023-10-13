@@ -22,4 +22,7 @@ public interface CartService {
     void batchDeleteCart(List<Long> skuIdList, Long userId);
 
     List<CartInfo> getCartList(Long userId);
+
+    //根据用户id删除选中的用户记录
+    void deleteCheckedCart(Long userId);
 }

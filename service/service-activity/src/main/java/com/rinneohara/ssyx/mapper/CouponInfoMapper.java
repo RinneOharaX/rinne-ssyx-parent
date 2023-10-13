@@ -4,6 +4,7 @@ package com.rinneohara.ssyx.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.rinneohara.ssyx.model.activity.CouponInfo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -19,4 +20,6 @@ import java.util.List;
 public interface CouponInfoMapper extends BaseMapper<CouponInfo> {
 
     List<CouponInfo> selectCouponInfoList(Long id, Long categoryId, Long userId);
+
+    List<CouponInfo> selectCarCouponInfoList(@Param("userId") Long userId);
 }

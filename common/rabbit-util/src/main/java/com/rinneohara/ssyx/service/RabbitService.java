@@ -1,5 +1,6 @@
 package com.rinneohara.ssyx.service;
 
+import com.rabbitmq.client.AMQP;
 import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessagePostProcessor;
@@ -20,6 +21,7 @@ public class RabbitService {
 
     public boolean sendMessage(String exchange,String routingKey,Object message){
         rabbitTemplate.convertAndSend(exchange,routingKey,message);
+
         return true;
     }
 

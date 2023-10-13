@@ -6,6 +6,7 @@ import com.rinneohara.ssyx.model.activity.ActivityRule;
 import com.rinneohara.ssyx.model.order.CartInfo;
 import com.rinneohara.ssyx.model.product.SkuInfo;
 import com.rinneohara.ssyx.vo.activity.ActivityRuleVo;
+import com.rinneohara.ssyx.vo.order.CartInfoVo;
 import com.rinneohara.ssyx.vo.order.OrderConfirmVo;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,8 @@ public interface ActivityInfoService extends IService<ActivityInfo> {
     List<ActivityRule> findActivityRule(Long skuId);
 
     OrderConfirmVo findCartActivityAndCoupon(List<CartInfo> cartInfoList, Long userId);
+
+    List<CartInfoVo> findCartActivityList(List<CartInfo> cartInfoList);
 
 //    Map<Long, List<String>>  findActivityNameBySkuList(List<Long> skuIdList);
 }

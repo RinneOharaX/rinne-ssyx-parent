@@ -1,11 +1,13 @@
 package com.rinneohara.ssyx.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.rinneohara.ssyx.common.result.Result;
 import com.rinneohara.ssyx.model.product.Category;
 import com.rinneohara.ssyx.model.product.SkuInfo;
 import com.rinneohara.ssyx.service.CategoryService;
 import com.rinneohara.ssyx.service.SkuInfoService;
 import com.rinneohara.ssyx.vo.product.SkuInfoVo;
+import com.rinneohara.ssyx.vo.product.SkuStockLockVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.elasticsearch.client.license.LicensesStatus;
@@ -77,6 +79,12 @@ public class ProductInnerController {
     @ApiOperation("根据skuId，获取Sku信息")
     @GetMapping("/inner/getSkuInfoVo/{skuId}")
     public SkuInfoVo getSkuInfoVo(@PathVariable Long skuId){
-        return skuInfoService.getSkuInfoVo(skuId);
+         return skuInfoService.getSkuInfoVo(skuId);
+    }
+
+    @ApiOperation(value = "锁定库存")
+    @PostMapping("inner/checkAndLock/{orderNo}")
+    public Result checkAndLock(@RequestBody  List<SkuStockLockVo> skuStockLockVoList, @PathVariable("orderNo") String orderNo) {
+        return skuInfoService.checkAndLock(skuStockLockVoList, orderNo);
     }
 }

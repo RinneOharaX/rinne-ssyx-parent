@@ -9,6 +9,7 @@ import com.rinneohara.ssyx.vo.order.OrderConfirmVo;
 import io.swagger.annotations.ApiOperation;
 import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +22,7 @@ import java.util.List;
  * @DATE: 2023/9/20 15:38
  */
 @RequestMapping("/api/cart")
+@RestController
 public class CartController {
 
 

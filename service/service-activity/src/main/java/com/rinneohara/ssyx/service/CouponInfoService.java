@@ -2,6 +2,7 @@ package com.rinneohara.ssyx.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.rinneohara.ssyx.common.result.Result;
 import com.rinneohara.ssyx.model.activity.CouponInfo;
 import com.rinneohara.ssyx.model.order.CartInfo;
 import com.rinneohara.ssyx.vo.activity.CouponRuleVo;
@@ -29,4 +30,8 @@ public interface CouponInfoService extends IService<CouponInfo> {
     List<CouponInfo> findCouponInfo(Long skuId, Long userId);
 
     List<CouponInfo> findCartCouponInfo(List<CartInfo> cartInfoList, Long userId);
+
+    CouponInfo findRangeSkuIdList(List<CartInfo> cartInfoList, Long couponId);
+
+   Result updateCouponInfoUseStatus(Long couponId, Long userId, Long orderId);
 }
