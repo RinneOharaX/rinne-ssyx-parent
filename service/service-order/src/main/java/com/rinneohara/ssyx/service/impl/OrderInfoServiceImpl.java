@@ -2,6 +2,8 @@ package com.rinneohara.ssyx.service.impl;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.rinneohara.ssyx.client.ActivityFeignClient;
 import com.rinneohara.ssyx.client.CartFeignClient;
@@ -16,6 +18,7 @@ import com.rinneohara.ssyx.common.result.ResultCodeEnum;
 import com.rinneohara.ssyx.constant.RabbitMqConst;
 import com.rinneohara.ssyx.enums.*;
 import com.rinneohara.ssyx.mapper.OrderInfoMapper;
+import com.rinneohara.ssyx.mapper.OrderItemMapper;
 import com.rinneohara.ssyx.model.activity.ActivityRule;
 import com.rinneohara.ssyx.model.activity.CouponInfo;
 import com.rinneohara.ssyx.model.order.CartInfo;
@@ -28,6 +31,7 @@ import com.rinneohara.ssyx.service.RabbitService;
 import com.rinneohara.ssyx.vo.order.CartInfoVo;
 import com.rinneohara.ssyx.vo.order.OrderConfirmVo;
 import com.rinneohara.ssyx.vo.order.OrderSubmitVo;
+import com.rinneohara.ssyx.vo.order.OrderUserQueryVo;
 import com.rinneohara.ssyx.vo.product.SkuStockLockVo;
 import com.rinneohara.ssyx.vo.user.LeaderAddressVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -77,6 +81,9 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
     private RedisTemplate redisTemplate;
     @Autowired
     private RabbitService rabbitService;
+
+    @Autowired
+    private OrderItemMapper orderItemMapper;
     @Override
     public OrderConfirmVo confirmOrder() {
         Long userId = ThreadLocalUtils.getUserId();
@@ -160,6 +167,8 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
         orderInfo.setOrderItemList(orderItems);
         return orderInfo;
     }
+
+
 
     @Transactional(rollbackFor = {Exception.class})
     public Long saveOrder(OrderSubmitVo orderParamVo, List<CartInfo> isCheckedCartInfo) {
@@ -417,6 +426,66 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
             couponInfoSplitAmountMap.put("coupon:total", couponInfo.getAmount());
         }
         return couponInfoSplitAmountMap;
+    }
+
+    public void updateOrderStatus(Long orderId, ProcessStatus processStatus) {
+        OrderInfo orderInfo = new OrderInfo();
+        orderInfo.setId(orderId);
+        orderInfo.setProcessStatus(processStatus);
+        orderInfo.setOrderStatus(processStatus.getOrderStatus());
+        if(processStatus == ProcessStatus.WAITING_DELEVER) {
+            orderInfo.setPaymentTime(new Date());
+        } else if(processStatus == ProcessStatus.WAITING_LEADER_TAKE) {
+            orderInfo.setDeliveryTime(new Date());
+        } else if(processStatus == ProcessStatus.WAITING_USER_TAKE) {
+            orderInfo.setTakeTime(new Date());
+        }
+        baseMapper.updateById(orderInfo);
+    }
+
+    @Override
+    public void orderPay(String orderNo) {
+        OrderInfo orderInfo = this.getOrderInfoByOrderNo(orderNo);
+        if(null == orderInfo || orderInfo.getOrderStatus() != OrderStatus.UNPAID) return;
+
+        //更改订单状态
+        this.updateOrderStatus(orderInfo.getId(),  ProcessStatus.WAITING_DELEVER);
+
+        //扣减库存
+        rabbitService.sendMessage(RabbitMqConst.EXCHANGE_ORDER_DIRECT, RabbitMqConst.ROUTING_MINUS_STOCK, orderNo);
+    }
+
+    @Override
+    public OrderInfo getOrderInfoByOrderNo(String orderNo) {
+        OrderInfo orderInfo = baseMapper.selectOne(new LambdaQueryWrapper<OrderInfo>().eq(OrderInfo::getOrderNo, orderNo));
+        orderInfo.getParam().put("orderStatusName", orderInfo.getOrderStatus().getComment());
+        List<OrderItem> orderItemList = orderItemService.list(new LambdaQueryWrapper<OrderItem>().eq(OrderItem::getOrderId, orderInfo.getId()));
+        orderInfo.setOrderItemList(orderItemList);
+        return orderInfo;
+    }
+
+    @Override
+    public IPage<OrderInfo> findUserOrderPage(Page<OrderInfo> pageParam,
+                                                     OrderUserQueryVo orderUserQueryVo) {
+        LambdaQueryWrapper<OrderInfo> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(OrderInfo::getUserId,orderUserQueryVo.getUserId());
+        wrapper.eq(OrderInfo::getOrderStatus,orderUserQueryVo.getOrderStatus());
+        IPage<OrderInfo> pageModel = baseMapper.selectPage(pageParam, wrapper);
+
+        //获取每个订单，把每个订单里面订单项查询封装
+        List<OrderInfo> orderInfoList = pageModel.getRecords();
+        for(OrderInfo orderInfo : orderInfoList) {
+            //根据订单id查询里面所有订单项列表
+            List<OrderItem> orderItemList = orderItemMapper.selectList(
+                    new LambdaQueryWrapper<OrderItem>()
+                            .eq(OrderItem::getOrderId, orderInfo.getId())
+            );
+            //把订单项集合封装到每个订单里面
+            orderInfo.setOrderItemList(orderItemList);
+            //封装订单状态名称
+            orderInfo.getParam().put("orderStatusName",orderInfo.getOrderStatus().getComment());
+        }
+        return pageModel;
     }
 }
 

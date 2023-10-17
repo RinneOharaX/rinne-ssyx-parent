@@ -17,6 +17,7 @@
     <file url="file://$PROJECT_DIR$/service/service-cart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service-client/service-activity-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service-client/service-cart-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service-client/service-order-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service-client/service-product-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service-client/service-search-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service-client/service-user-client/src/main/java" charset="UTF-8" />

@@ -14,4 +14,6 @@ public interface SkuInfoMapper extends BaseMapper<SkuInfo> {
     SkuInfo checkStock(Long skuId, Integer skuNum);
 
     Integer lockStock(Long skuId, Integer skuNum);
+
+    Integer minusStock(Long skuId, Integer skuNum);
 }

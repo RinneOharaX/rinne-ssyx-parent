@@ -51,7 +51,7 @@ public class CartServiceImp implements CartService {
             }
             cartInfo.setSkuNum(currentNum);
             cartInfo.setCurrentBuyNum(currentNum);
-            if (currentNum>=cartInfo.getPerLimit()){
+            if (currentNum>cartInfo.getPerLimit()){
                 throw new MyException(ResultCodeEnum.SKU_LIMIT_ERROR);
             }
             cartInfo.setIsChecked(1);

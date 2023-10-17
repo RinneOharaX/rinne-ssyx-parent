@@ -20,4 +20,6 @@ public interface SkuInfoService extends IService<SkuInfo> {
     SkuInfoVo getSkuInfoVo(Long skuId);
 
     Result checkAndLock(List<SkuStockLockVo> skuStockLockVoList, String orderNo);
+
+    void minusStock(String orderNo);
 }
